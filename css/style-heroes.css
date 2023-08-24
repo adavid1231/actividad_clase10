@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: #00669F;
+    --sec-color: #F3F3F3;
+    --txt-main-color: black;
+    --txt-sec-color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.descuentos {
+    background-color: #D1891C;
+    color: #333;
+    width: 100%;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+}
+
+header,
+footer {
+    background-color: var(--main-color);
+    color: var(--txt-sec-color);
+    position: sticky;
+    left: 0;
+    z-index: 22222;
+}
+
+header {
+    box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.25);
+    top: 0;
+}
+
+.main-header {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo-principal {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    padding: 2rem;
+}
+
+.regresar {
+    background-color: var(--sec-color);
+    color: var(--txt-main-color);
+    text-decoration: none;
+    position: absolute;
+    right: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all ease-in-out 0.1s;
+}
+
+.regresar:hover {
+    border: 2px solid black;
+    transform: scale(1.1);
+}
+
+main {
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    gap: 3rem;
+}
+
+.card {
+    background-color: var(--sec-color);
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 20rem;
+    position: relative;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    justify-content: space-between;
+}
+
+.fa-heart {
+    position: absolute;
+    font-size: 2rem;
+    left: 1.5rem;
+    top: 1.5rem;
+    color: #CC2424;
+    z-index: 22;
+}
+
+.card-fondo {
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+}
+
+.card-fondo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transform: scale(1.5);
+}
+
+.card-perfil {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 22;
+    top: -3rem;
+}
+
+.card-perfil img {
+    border-radius: 100%;
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    transform: scale(1.5);
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0rem 1rem 2rem;
+}
+
+.card-info h2 {
+    text-align: center;
+    font-weight: normal;
+}
+
+.card-boton {
+    background-color: var(--main-color);
+    color: var(--txt-sec-color);
+    font-size: 1.25rem;
+    width: 8rem;
+    height: 3rem;
+    border: 2px solid transparent;
+    border-radius: 0.25rem;
+    transition: all ease-in-out 0.2s;
+}
+
+.card-boton:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+aside {
+    background-color: var(--main-color);
+    color: var(--txt-sec-color);
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 45vh;
+    right: 1rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    z-index: 222;
+    transition: all ease-in-out 0.1s;
+}
+
+aside:hover {
+    background-color: var(--sec-color);
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    height: 60px;
+    position: sticky;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.derechos-reservados {
+    color: var(--sec-color);
+}
+
+.github {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    right: 2.5rem;
+    cursor: pointer;
+    transition: all ease-out 0.1s;
+}
+
+.github:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+    .descuentos {
+        font-size: 1rem;
+    }
+
+    .titulo-principal {
+        font-size: 1.5rem;
+    }
+
+    aside {
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+        top: 80vh;
+    }
+
+    footer {
+        font-size: 0.6rem;
+    }
+
+    .github {
+        font-size: 1.5rem;
+        right: 0.5rem;
+    }
+}
